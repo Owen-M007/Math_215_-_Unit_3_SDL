@@ -1,0 +1,3 @@
+This folder contains my work from the summer of 2026, when I started learning C++. At that
+time, I had already become familiar with Python and C#. I learned C++ with the book "C++
+Without Fear (Second Edition)" by Brian Overland.
