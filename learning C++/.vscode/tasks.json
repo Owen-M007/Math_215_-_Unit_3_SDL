@@ -1,0 +1,39 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: cl.exe build active file",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/EHsc",
+                "/nologo",
+                "/Fe${fileDirname}\\build\\${fileBasenameNoExtension}.exe",
+                "/Fo${fileDirname}\\build\\${fileBasenameNoExtension}.obj",
+                "/Fd${fileDirname}\\build\\${fileBasenameNoExtension}.pdb",
+                "${file}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "dependsOn": [
+                "Create C++ build directory"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build active C++ file with MSVC"
+        },
+        {
+            "label": "Create C++ build directory",
+            "type": "shell",
+            "command": "New-Item -ItemType Directory -Force -Path '${fileDirname}\\build' | Out-Null",
+            "problemMatcher": []
+        }
+    ],
+    "version": "2.0.0"
+}
